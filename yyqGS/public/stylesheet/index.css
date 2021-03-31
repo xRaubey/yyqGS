@@ -1,0 +1,311 @@
+html,body{
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to top right,rgb(91,72,219), rgb(72,219,219));
+    border: 0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+@font-face {
+    src: url("../font/Championship.ttf");
+    font-family: championship;
+}
+@font-face {
+    src: url("../font/UrbanJungleDEMO.otf");
+    font-family: urban;
+}
+
+#loading_page{
+    width:100%;
+    height:100%;
+    z-index: 20;
+    background: black;
+    position: absolute;
+}
+
+#welcomings1{
+    position: absolute;
+    color: white;
+    height:120px;
+    top:43%;
+    width:0;
+    font-size: 2em;
+    text-align: left;
+    line-height: 120px;
+    overflow: hidden;
+    opacity:0;
+}
+
+.blah {
+    position: absolute;
+    top: 40%;
+    width: 180px;
+    height: 120px;
+    margin: -25px 0 25px;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 180px;
+    flex: 1 1 180px;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+}
+
+.lds-css {
+    width: 200px;
+    height:200px;
+    margin:auto;
+    -webkit-transform: scale(0.5);
+    -ms-transform: scale(0.5);
+    transform: scale(0.5)
+}
+
+@-webkit-keyframes lds-microsoft {
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes lds-microsoft {
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+.lds-microsoft {
+    position: relative;
+}
+
+.lds-microsoft div {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    -webkit-animation: lds-microsoft 1.5s cubic-bezier(.2,.64,.81,.23) infinite;
+    animation: lds-microsoft 1.5s cubic-bezier(.2,.64,.81,.23) infinite;
+}
+
+.lds-microsoft div:nth-child(0) {
+    background: #eeefff;
+    top: 134.613px;
+    left: 147.535px;
+    -webkit-transform-origin: -47.535px -34.613px;
+    -ms-transform-origin: -47.535px -34.613px;
+    transform-origin: -47.535px -34.613px;
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+}
+
+.lds-microsoft div:nth-child(1) {
+    background: #eeefff;
+    top: 147.535px;
+    left: 134.613px;
+    -webkit-transform-origin: -34.613px -47.535px;
+    -ms-transform-origin: -34.613px -47.535px;
+    transform-origin: -34.613px -47.535px;
+    -webkit-animation-delay: -0.062s;
+    animation-delay: -0.062s;
+}
+
+.lds-microsoft div:nth-child(2) {
+    background: #eeefff;
+    top: 156.672px;
+    left: 118.788px;
+    -webkit-transform-origin: -18.788px -56.672px;
+    -ms-transform-origin: -18.788px -56.672px;
+    transform-origin: -18.788px -56.672px;
+    -webkit-animation-delay: -0.125s;
+    animation-delay: -0.125s;
+}
+
+.lds-microsoft div:nth-child(3) {
+    background: #eeefff;
+    top: 161.401px;
+    left: 101.137px;
+    -webkit-transform-origin: -1.137px -61.401px;
+    -ms-transform-origin: -1.137px -61.401px;
+    transform-origin: -1.137px -61.401px;
+    -webkit-animation-delay: -0.187s;
+    animation-delay: -0.187s;
+}
+
+.lds-microsoft div:nth-child(4) {
+    background: #eeefff;
+    top: 161.401px;
+    left: 82.863px;
+    -webkit-transform-origin: 17.137px -61.401px;
+    -ms-transform-origin: 17.137px -61.401px;
+    transform-origin: 17.137px -61.401px;
+    -webkit-animation-delay: -0.25s;
+    animation-delay: -0.25s;
+}
+
+.lds-microsoft div:nth-child(5) {
+    background: #eeefff;
+    top: 156.672px;
+    left: 65.212px;
+    -webkit-transform-origin: 34.788px -56.672px;
+    -ms-transform-origin: 34.788px -56.672px;
+    transform-origin: 34.788px -56.672px;
+    -webkit-animation-delay: -0.312s;
+    animation-delay: -0.312s;
+}
+
+.lds-microsoft div:nth-child(6) {
+    background: #eeefff;
+    top: 147.535px;
+    left: 49.387px;
+    -webkit-transform-origin: 50.613px -47.535px;
+    -ms-transform-origin: 50.613px -47.535px;
+    transform-origin: 50.613px -47.535px;
+    -webkit-animation-delay: -0.375s;
+    animation-delay: -0.375s;
+}
+
+.lds-microsoft div:nth-child(7) {
+    background: #eeefff;
+    top: 134.613px;
+    left: 36.465px;
+    -webkit-transform-origin: 63.535px -34.613px;
+    -ms-transform-origin: 63.535px -34.613px;
+    transform-origin: 63.535px -34.613px;
+    -webkit-animation-delay: -0.437s;
+    animation-delay: -0.437s;
+}
+
+#footer{
+    position: absolute;
+    width:100%;
+    height: auto;
+    bottom: 0;
+    color: white;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+
+input:focus{
+    outline: none;
+}
+
+#logIn_UI{
+    position: absolute;
+    z-index: 10;
+    opacity: 1;
+    border: 3px solid white;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background: linear-gradient(to bottom,rgba(0,0,0,0.5),rgba(0,0,0,1));
+}
+
+#li_form{
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+
+#formTitle{
+    position: relative;
+    width:100%;
+    height:40%;
+    font-family: urban, sans-serif;
+    font-size: 3em;
+}
+
+#formAccount{
+    position:relative;
+    width:100%;
+    height: 30%;
+}
+
+#formPassword{
+    position: relative;
+    width:100%;
+    height:30%;
+}
+
+
+#an{
+
+    width:60%;
+    background: none;
+    border: none;
+    border-bottom: 3px solid white;
+    color: #fff;
+
+}
+
+
+
+#password{
+    width:60%;
+    background: none;
+    border: none;
+    border-bottom: 3px solid white;
+    color: #fff;
+}
+
+
+#input{
+    position: relative;
+    width:100%;
+    height: 50%;
+}
+
+#li_button{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    height: 20%;
+    position: relative;
+    width:100%;
+    background: black;
+    color: white;
+    font-size: 1.2em;
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+#su_button{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    height: 20%;
+    position: relative;
+    width:100%;
+    background: black;
+    color: white;
+    font-size:1.2em;
+    opacity:0.6;
+    cursor: pointer;
+}
+
+#info{
+    position: absolute;
+    bottom:0;
+    width:100%;
+    height:10%;
+    background: #000;
+    text-align: center;
+    color: #fff;
+}
+
+#notice{
+    position: absolute;
+    bottom:0;
+    width:100%;
+    height:auto;
+    text-align: center;
+}
