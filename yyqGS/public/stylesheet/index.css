@@ -194,6 +194,11 @@ html,body{
     text-align: center;
 }
 
+canvas{
+    position: absolute;
+    top:0;
+    left:0;
+}
 
 input:focus{
     outline: none;
@@ -203,10 +208,10 @@ input:focus{
     position: absolute;
     z-index: 10;
     opacity: 1;
-    border: 3px solid white;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
+    /*border: 3px solid white;*/
+    /*-webkit-border-radius: 5px;*/
+    /*-moz-border-radius: 5px;*/
+    /*border-radius: 5px;*/
     background: linear-gradient(to bottom,rgba(0,0,0,0.5),rgba(0,0,0,1));
 }
 
@@ -223,13 +228,14 @@ input:focus{
     width:100%;
     height:40%;
     font-family: urban, sans-serif;
-    font-size: 3em;
+    font-size: 2.2em;
 }
 
 #formAccount{
     position:relative;
     width:100%;
     height: 30%;
+
 }
 
 #formPassword{
@@ -257,36 +263,37 @@ input:focus{
     border: none;
     border-bottom: 3px solid white;
     color: #fff;
+    mix-blend-mode: difference;
 }
 
 
 #input{
     position: relative;
-    width:100%;
-    height: 50%;
+    /*width:100%;*/
+    /*height: 50%;*/
 }
 
 #li_button{
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    height: 20%;
+    /*-webkit-appearance: none;*/
+    /*-moz-appearance: none;*/
+    /*height: 20%;*/
     position: relative;
-    width:100%;
-    background: black;
-    color: white;
+    /*width:100%;*/
+    /*background: black;*/
+    /*color: white;*/
     font-size: 1.2em;
     opacity: 0.6;
     cursor: pointer;
 }
 
 #su_button{
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    height: 20%;
+    /*-webkit-appearance: none;*/
+    /*-moz-appearance: none;*/
+    /*height: 20%;*/
     position: relative;
-    width:100%;
-    background: black;
-    color: white;
+    /*width:100%;*/
+    /*background: black;*/
+    /*color: white;*/
     font-size:1.2em;
     opacity:0.6;
     cursor: pointer;

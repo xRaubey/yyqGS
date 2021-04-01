@@ -11,6 +11,8 @@ if(is_post_request()){
     $subject = mysqli_fetch_assoc($result);
     $row = mysqli_num_rows($result);
     $_SESSION['ID'] = isset($subject['id'])?$subject['id']:'';
+//    $_SESSION['id'] = isset($subject['id'])?$subject['id']:'';
+
 
     if($row === 1 && $psw === $subject['password']){
         $_SESSION['loggedIn'] = true;

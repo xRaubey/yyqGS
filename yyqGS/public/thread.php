@@ -6,13 +6,29 @@ if(!$_SESSION['loggedIn']){
 }
 
 
-$id = $_GET['id'];
+
+
+//$id = $_GET['id'];
+$id = $_SESSION['ID'];
  $t_id = $_GET['tid'];
  $_SESSION['tid'] = $t_id;
- $country = $_GET['country'];
- $country = mysqli_real_escape_string($db,$country);
- $_SESSION['country']=$country;
+// $country = $_GET['country'];
+$country = $_SESSION['country'];
+// $country = mysqli_real_escape_string($db,$country);
+// $_SESSION['country']=$country;
  $page = isset($_GET['page'])?$_GET['page']:'1';
+
+
+if(isset($_SESSION['ID']) && isset($_SESSION['country'])){
+
+    if($id != $_GET['id'] || $country!=$_GET['country']){
+        redirect_to(url_for("countries.php?id=".$_SESSION['ID']."&country=". $country));
+    }
+}
+else{
+    echo'<script>window.location = \'index.php\';</script>';
+}
+
 ?>
 
 <!doctype html>

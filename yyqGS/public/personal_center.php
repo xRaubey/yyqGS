@@ -1,9 +1,21 @@
 <?php
 require_once '../private/initialize.php';
 session_start();
-$id = isset($_GET['id'])?$_GET['id']:'';
+//$id = isset($_GET['id'])?$_GET['id']:'';
+
 if(!$_SESSION['loggedIn']){
     redirect_to(url_for("index.php"));
+}
+
+if(isset($_SESSION['ID'])){
+    $sid = $_SESSION['ID'];
+
+    if($sid != $_GET['id']){
+        redirect_to(url_for("personal_center.php?id=".$_SESSION['ID']));
+    }
+}
+else{
+    echo'<script>window.location = \'index.php\';</script>';
 }
 
 ?>

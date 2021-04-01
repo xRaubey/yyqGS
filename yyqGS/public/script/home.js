@@ -76,9 +76,9 @@ $(window).on("load",function(){
 
         var loading = 0;
 
-        console.log(world);
+        // console.log(world);
         var countries = topojson.feature(world, world.objects.countries).features;
-        console.log(countries);
+        // console.log(countries);
 
         function fill (d,callback) {
             var name= d.properties.name;
@@ -88,6 +88,7 @@ $(window).on("load",function(){
                 type: "POST",
                 data:{country:name},
                 success: function (data) {
+                    console.log(data);
                     if(name.indexOf(' ')!==-1){
                         name = name.replace(/\s/g,'_');
                     }
@@ -175,7 +176,17 @@ $(window).on("load",function(){
             .on("click",function (d) {
                 var url = window.location.href;
                 var user_id = url.substr(url.lastIndexOf('?')+1);
-                window.location = "countries.php?"+ user_id+"&country=" + d.properties.name;
+                var country_name = d.properties.name;
+                // alert(country_name);
+                $.ajax({
+                    url:"/yyqGS/public/form/selected_country.php",
+                    method: "POST",
+                    data: {country:country_name},
+                    success:function (d) {
+                        window.location = "countries.php?"+ user_id+"&country=" + country_name;
+                    }
+                });
+
             });
 
 

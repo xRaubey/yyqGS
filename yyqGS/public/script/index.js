@@ -224,9 +224,9 @@ $(window).on("load",function(){
             type:"POST",
             data:$form.serialize(),
             success:function (d) {
-
                 if(d === "Account or Password is not correct!"){
-                    $("#info").html(d);
+                    $("#info").addClass("text-danger").html(d);
+                    // $("#info").css("color","red");
                 }
                 else{
                     location.href = "/yyqGS/public/home.php?id="+d;

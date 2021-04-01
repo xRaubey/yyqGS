@@ -5,14 +5,25 @@ if(!$_SESSION['loggedIn']){
     redirect_to(url_for("index.php"));
 }
 
-    $_SESSION['id'] = $_GET['id'];
+//    $_SESSION['id'] = $_GET['id'];
 
 
-    if(isset($_SESSION['id'])){
-        $id = $_SESSION['id'];
+    if(isset($_SESSION['ID'])){
+        $id = $_SESSION['ID'];
         $sql = "SELECT * FROM log_in WHERE id='" . $id . "'";
         $result = mysqli_query($db,$sql);
         $info_array = mysqli_fetch_assoc($result);
+
+//        redirect_to(url_for("home.php?id=". $_SESSION['ID']));
+
+
+//        echo '<scprit> alert('. $info_array['id']. ')</scprit>';
+//
+//
+//        if($info_array['id']!=$id){
+//            echo'<script>window.location = \'index.php\';</script>';
+//        }
+
         mysqli_free_result($result);
     }
     else{
@@ -77,7 +88,7 @@ if(!$_SESSION['loggedIn']){
 
             <?php
                 echo "<a href=";
-                echo url_for("personal_center.php?id=") . $_SESSION['id'];
+                echo url_for("personal_center.php?id=") . $_SESSION['ID'];
                 echo ">";
                 echo isset($info_array['user_name'])?$info_array['user_name']:'';
                 echo "</a>";

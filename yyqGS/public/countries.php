@@ -2,13 +2,26 @@
     require_once "../private/initialize.php";
     session_start();
 
-    $country = mysqli_real_escape_string($db,$_GET['country']);
-    $_SESSION['country'] = $country;
+//    $country = mysqli_real_escape_string($db,$_GET['country']);
+//    $_SESSION['country'] = $country;
+
+    $country = $_SESSION['country'];
 
 if(!$_SESSION['loggedIn']){
     redirect_to(url_for("index.php"));
 }
 
+
+if(isset($_SESSION['ID']) && isset($_SESSION['country'])){
+    $sid = $_SESSION['ID'];
+
+    if($sid != $_GET['id'] || $country!=$_GET['country']){
+        redirect_to(url_for("countries.php?id=".$_SESSION['ID']."&country=". $country));
+    }
+}
+else{
+    echo'<script>window.location = \'index.php\';</script>';
+}
 
 ?>
 

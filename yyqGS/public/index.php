@@ -11,6 +11,7 @@ session_destroy();
     <meta name="description" content="LikeCenter">
     <title>Little World</title>
     <link type="text/css" rel="stylesheet" href="<?php echo url_for('/stylesheet/index.css') ?>">
+    <link type="text/css" rel="stylesheet" href="<?php echo url_for('/stylesheet/bootstrap.css') ?>"
     </html>
 
     <body>
@@ -36,7 +37,6 @@ session_destroy();
         <footer id="footer">
             yang643@uwm.edu
         </footer>
-    </div>
 
     <script type="x-shader/x-vertex" id="vertexShader">
 
@@ -69,30 +69,34 @@ void main()
 
 </script>
 
-    <div id="logIn_UI">
-        <form id="li_form" method="post" action="<?php echo url_for('/form/log_in.php') ?>">
-            <div id="input">
-                <div id="formTitle">
-                    Little World
-                </div>
-                <!--Account Name<br> -->
-                <div id="formAccount">
-                    <input type="text" name="account_li" placeholder="Account Name" id="an" onClick="this.setSelectionRange(0, this.value.length)">
-                    <br><br>
-                </div>
-                <!--Password<br>-->
-                <div id="formPassword">
-                    <input type="password" name="password_li" placeholder="Password" id="password" onClick="this.setSelectionRange(0, this.value.length)">
-                    <br>
-                </div>
+    <div class="container h-100">
+        <div class="row justify-content-center">
+            <div id="logIn_UI" class="col-6 border border-dark rounded-top">
+                <form id="li_form" class="form-group p-0 m-0" method="post" action="<?php echo url_for('/form/log_in.php') ?>">
+                    <div id="input" class="row p-0 m-0 d-inline-flex justify-content-center">
+                        <div id="formTitle" class="col-12 mt-3 mb-3">
+                            Global News
+                        </div>
+                        <!--Account Name<br> -->
+                        <div id="formAccount" class="row col-12 justify-content-center">
+                            <input type="text" class="form-control col-10 m-2 border-dark" name="account_li" placeholder="Account" id="an" onClick="this.setSelectionRange(0, this.value.length)">
+                        </div>
+                        <!--Password<br>-->
+                        <div id="formPassword" class="row col-12 justify-content-center">
+                            <input type="password" class="form-control col-10 m-2 border-dark " name="password_li" placeholder="Password" id="password" onClick="this.setSelectionRange(0, this.value.length)">
+                        </div>
+                        <input type="submit" class="btn btn-primary col-4 m-2 mt-5" name="login" value="Log In" id="li_button">
+                        <input type="button" class="btn btn-danger col-4 m-2 mt-5" value="Sign Up" id="su_button">
+                        <div id="info" class="col-12 position-relative"></div>
+                    </div>
+                </form>
             </div>
-            <input type="submit" name="login" value="Log In" id="li_button">
-            <input type="button" value="Sign Up" id="su_button">
-            <div id="info"></div>
-        </form>
+        </div>
     </div>
 
+
     <script src="<?php echo url_for('/script/jquery-3.1.1.js')?>" type="text/javascript"></script>
+    <script src="<?php echo url_for('/script/bootstrap.js')?>" type="text/javascript"></script>
     <script src="<?php echo url_for('/script/index.js')?>" type="text/javascript"></script>
     <script src="<?php echo url_for('/script/three.js')?>" type="text/javascript"></script>
     <script src="<?php echo url_for('/script/OrbitControls.js')?>" type="text/javascript"></script>

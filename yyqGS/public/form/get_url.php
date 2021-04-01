@@ -2,8 +2,10 @@
 require_once "../../private/initialize.php";
     session_start();
     $tid = $_SESSION['tid'];
-    $id = $_SESSION['id'];
-    $country = $_SESSION['country'];
+//    $id = $_SESSION['id'];
+    $id = $_SESSION['ID'];
+
+$country = $_SESSION['country'];
     $rid = $_SESSION['REPLY_INDEX'];
     $cid = $_SESSION['COMMENT_INDEX'];
 
