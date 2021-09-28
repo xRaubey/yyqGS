@@ -13,137 +13,137 @@ html,body{
     font-family: urban;
 }
 
-#container{
-    position: absolute;
-    height:100%;
-    width:100%;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    padding:0;
-    margin:0;
-    border:0;
-}
+/*#container{*/
+    /*position: absolute;*/
+    /*height:100%;*/
+    /*width:100%;*/
+    /*overflow-y: scroll;*/
+    /*overflow-x: hidden;*/
+    /*padding:0;*/
+    /*margin:0;*/
+    /*border:0;*/
+/*}*/
 
-input:focus{
-    outline: none;
-}
+/*input:focus{*/
+    /*outline: none;*/
+/*}*/
 
-#signUp_UI{
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: white;
-    opacity: 1;
-    text-align: center;
-    border:3px solid white;
-}
+/*#signUp_UI{*/
+    /*position: absolute;*/
+    /*top: 0;*/
+    /*left: 0;*/
+    /*background: white;*/
+    /*opacity: 1;*/
+    /*text-align: center;*/
+    /*border:3px solid white;*/
+/*}*/
 
-#su_form{
-    width:100%;
-    height:100%;
-    background: #fff;
-    opacity:0.6;
-}
+/*#su_form{*/
+    /*width:100%;*/
+    /*height:100%;*/
+    /*background: #fff;*/
+    /*opacity:0.6;*/
+/*}*/
 
 #title{
     position: relative;
     font-family: urban,sans-serif;
-    text-align: center;
+    /*text-align: center;*/
     font-size: 3em;
     width:100%;
-    height:20%;
+    /*height:20%;*/
 }
 
-#formTitle{
-    position: relative;
-    width:100%;
-    height:10%;
-}
+/*#formTitle{*/
+    /*position: relative;*/
+    /*width:100%;*/
+    /*height:10%;*/
+/*}*/
 
-#notice1{
-    position: relative;
-    width:100%;
-    height:auto;
-}
+/*#notice1{*/
+    /*position: relative;*/
+    /*width:100%;*/
+    /*height:auto;*/
+/*}*/
 
-#formAccount{
-    position: relative;
-    width:100%;
-    height:10%;
-}
+/*#formAccount{*/
+    /*position: relative;*/
+    /*width:100%;*/
+    /*height:10%;*/
+/*}*/
 
-#an{
-    width:50%;
-    border:none;
-    border-bottom: 3px solid black;
-}
+/*#an{*/
+    /*width:50%;*/
+    /*border:none;*/
+    /*border-bottom: 3px solid black;*/
+/*}*/
 
-#formUser{
-    position: relative;
-    width:100%;
-    height:10%;
-}
+/*#formUser{*/
+    /*position: relative;*/
+    /*width:100%;*/
+    /*height:10%;*/
+/*}*/
 
-#un{
-    width:50%;
-    border:none;
-    border-bottom: 3px solid black;
-}
+/*#un{*/
+    /*width:50%;*/
+    /*border:none;*/
+    /*border-bottom: 3px solid black;*/
+/*}*/
 
-#notice2{
-    position: relative;
-    width:100%;
-    height:auto;
-}
+/*#notice2{*/
+    /*position: relative;*/
+    /*width:100%;*/
+    /*height:auto;*/
+/*}*/
 
-#formPassword{
-    position: relative;
-    width:100%;
-    height:10%;
-}
+/*#formPassword{*/
+    /*position: relative;*/
+    /*width:100%;*/
+    /*height:10%;*/
+/*}*/
 
-#password{
-    width:50%;
-    border:none;
-    border-bottom: 3px solid black;
-}
+/*#password{*/
+    /*width:50%;*/
+    /*border:none;*/
+    /*border-bottom: 3px solid black;*/
+/*}*/
 
-#formComfirm{
-    position: relative;
-    width:100%;
-    height:10%;
-}
+/*#formComfirm{*/
+    /*position: relative;*/
+    /*width:100%;*/
+    /*height:10%;*/
+/*}*/
 
-#password2{
-    width:50%;
-    border:none;
-    border-bottom: 3px solid black;
-}
+/*#password2{*/
+    /*width:50%;*/
+    /*border:none;*/
+    /*border-bottom: 3px solid black;*/
+/*}*/
 
-#notice3{
-    position: relative;
-    width:100%;
-    height:auto;
-}
+/*#notice3{*/
+    /*position: relative;*/
+    /*width:100%;*/
+    /*height:auto;*/
+/*}*/
 
-#gb_button{
-    position: relative;
-    width:100%;
-    height:8%;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    background: white;
-    color: black;
-    border:1px solid black;
-}
+/*#gb_button{*/
+    /*position: relative;*/
+    /*width:100%;*/
+    /*height:8%;*/
+    /*-webkit-appearance: none;*/
+    /*-moz-appearance: none;*/
+    /*background: white;*/
+    /*color: black;*/
+    /*border:1px solid black;*/
+/*}*/
 
-#su_button2{
-    position: relative;
-    width:100%;
-    height:8%;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    background: white;
-    color: black;
-    border:1px solid black;
-}
+/*#su_button2{*/
+    /*position: relative;*/
+    /*width:100%;*/
+    /*height:8%;*/
+    /*-webkit-appearance: none;*/
+    /*-moz-appearance: none;*/
+    /*background: white;*/
+    /*color: black;*/
+    /*border:1px solid black;*/
+/*}*/

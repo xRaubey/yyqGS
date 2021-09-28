@@ -1,4 +1,9 @@
 <?php
+
+/**
+ * Verify the account and password.
+ */
+
 require_once '../../private/initialize.php';
 session_start();
 

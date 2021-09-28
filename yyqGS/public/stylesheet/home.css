@@ -87,7 +87,7 @@ html,body{
 }
 
 .lds-microsoft div:nth-child(0) {
-    background: #eeefff;
+    background: white;
     top: 134.613px;
     left: 147.535px;
     -webkit-transform-origin: -47.535px -34.613px;
@@ -98,7 +98,7 @@ html,body{
 }
 
 .lds-microsoft div:nth-child(1) {
-    background: #eeefff;
+    background: white;
     top: 147.535px;
     left: 134.613px;
     -webkit-transform-origin: -34.613px -47.535px;
@@ -109,7 +109,7 @@ html,body{
 }
 
 .lds-microsoft div:nth-child(2) {
-    background: #eeefff;
+    background: white;
     top: 156.672px;
     left: 118.788px;
     -webkit-transform-origin: -18.788px -56.672px;
@@ -120,7 +120,7 @@ html,body{
 }
 
 .lds-microsoft div:nth-child(3) {
-    background: #eeefff;
+    background: white;
     top: 161.401px;
     left: 101.137px;
     -webkit-transform-origin: -1.137px -61.401px;
@@ -131,7 +131,7 @@ html,body{
 }
 
 .lds-microsoft div:nth-child(4) {
-    background: #eeefff;
+    background: white;
     top: 161.401px;
     left: 82.863px;
     -webkit-transform-origin: 17.137px -61.401px;
@@ -142,7 +142,7 @@ html,body{
 }
 
 .lds-microsoft div:nth-child(5) {
-    background: #eeefff;
+    background: red;
     top: 156.672px;
     left: 65.212px;
     -webkit-transform-origin: 34.788px -56.672px;
@@ -153,7 +153,7 @@ html,body{
 }
 
 .lds-microsoft div:nth-child(6) {
-    background: #eeefff;
+    background: white;
     top: 147.535px;
     left: 49.387px;
     -webkit-transform-origin: 50.613px -47.535px;
@@ -164,7 +164,7 @@ html,body{
 }
 
 .lds-microsoft div:nth-child(7) {
-    background: #eeefff;
+    background: white;
     top: 134.613px;
     left: 36.465px;
     -webkit-transform-origin: 63.535px -34.613px;

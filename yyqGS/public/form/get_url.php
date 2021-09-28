@@ -1,4 +1,9 @@
 <?php
+
+/**
+ * Redirect to a URL after ajax call has been finished.
+ */
+
 require_once "../../private/initialize.php";
     session_start();
     $tid = $_SESSION['tid'];
@@ -16,6 +21,6 @@ $country = $_SESSION['country'];
 
     $req_page = "SELECT * FROM comments WHERE country='" .$country. "' AND t_id='" .$tid. "' AND r_id='0'";
     $result_page = mysqli_query($db,$req_page);
-    $page = floor(mysqli_num_rows($result_page)/10+1);
+    $page = ceil(mysqli_num_rows($result_page)/10);
 
     echo $id.",".$country.",".$tid.",".$cid.",".$rid.",".$comment_user,",",$page;

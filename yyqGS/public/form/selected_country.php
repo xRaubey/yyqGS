@@ -6,6 +6,10 @@
  * Time: 5:47 PM
  */
 
+/**
+ * Let the browser know which country just clicked.
+ */
+
 require_once "../../private/initialize.php";
 session_start();
 

@@ -1,4 +1,9 @@
 <?php
+
+/**
+ * Remove the "marked" page from the user page.
+ */
+
 require_once "../../private/initialize.php";
 session_start();
 

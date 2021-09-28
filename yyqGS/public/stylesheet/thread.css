@@ -18,42 +18,46 @@ body,html{
 }
 
 #container{
-    position: absolute;
-    left:60px;
-    width:calc(100% - 120px);
-    height:100%;
+    /*position: absolute;*/
+    /*left:60px;*/
+    /*width:calc(100% - 120px);*/
+    /*height:100%;*/
     overflow: hidden;
-    padding:0;
-    border: 0;
-    margin:0;
+    /*padding:0;*/
+    /*border: 0;*/
+    /*margin:0;*/
 }
 
 #title{
-    height:130px;
-    width:100%;
+    min-height:80px;
+    height: auto;
+    /*width:100%;*/
     background: white;
     text-align: center;
     color: black;
-    font-size:2em;
-    line-height: 130px;
+    font-size:1.5em;
+    /*line-height: 130px;*/
     overflow: hidden;
     text-overflow: ellipsis;
-    text-wrap: none;
+    text-wrap: normal;
     text-decoration: none;
+    white-space: normal;
+    overflow-wrap: break-word;
+    z-index: 1;
 }
 
 #toolbar{
-    position: absolute;
-    height: 100%;
-    width:60px;
-    right:0;
+    /*position: absolute;*/
+    /*height: 100%;*/
+    /*width:60px;*/
+    /*right:0;*/
 }
 
 
-#dlb{
-    position: absolute;
-    bottom:1%;
-}
+/*#dlb{*/
+    /*position: absolute;*/
+    /*bottom:1%;*/
+/*}*/
 
 #loading_button{
     position: absolute;
@@ -62,14 +66,14 @@ body,html{
 }
 
 #delete_bar{
-    position: absolute;
-    height: 100%;
-    width:60px;
+    /*position: absolute;*/
+    /*height: 100%;*/
+    /*width:60px;*/
 
 }
 
 #dt{
-    top:33%;
+    /*top:33%;*/
 }
 
 #comments_container{
@@ -83,26 +87,29 @@ body,html{
     background-image: url("../pic/city.gif");
     -webkit-background-size: cover;
     background-size: cover;
+    z-index: 1;
 }
 
 #type{
-    position: absolute;
-    width:100%;
-    height:70px;
-    bottom:0;
-    right:0;
+    /*position: absolute;*/
+    /*width:100%;*/
+    /*height:70px;*/
+    /*bottom:0;*/
+    /*right:0;*/
+
+    overflow: scroll;
 }
 
 #type_area{
-    position: relative;
-    width:100%;
-    height:100%;
+    /*position: relative;*/
+    /*width:100%;*/
+    /*height:100%;*/
 }
 
 #type_bar{
-    position: absolute;
-    width:80%;
-    height:100%;
+    /*position: absolute;*/
+    /*width:80%;*/
+    /*height:100%;*/
 }
 
 #type_bar:focus{
@@ -110,17 +117,17 @@ body,html{
 }
 
 #send_button{
-    position: absolute;
-    height:50%;
-    width:20%;
-    right:0;
-    margin: 0;
-    padding:0;
-    border:0;
-    top:50%;
-    cursor: pointer;
-    box-sizing: border-box;
-    background: white;
+    /*position: absolute;*/
+    /*height:50%;*/
+    /*width:20%;*/
+    /*right:0;*/
+    /*margin: 0;*/
+    /*padding:0;*/
+    /*border:0;*/
+    /*top:50%;*/
+    /*cursor: pointer;*/
+    /*box-sizing: border-box;*/
+    /*background: white;*/
 }
 
 #send_button:focus{
@@ -160,7 +167,7 @@ body,html{
 
 input[type='file']{
 
-    display: none;
+    /*display: none;*/
 }
 
 #up_title{
@@ -171,40 +178,41 @@ input[type='file']{
 }
 
 .comment{
-    position: relative;
-    min-height: 10%;
-    width:100%;
-    margin:0;
-    padding: 0;
-    border:0;
-    overflow: hidden;
-    display: block;
+    /*position: relative;*/
+    /*min-height: 10%;*/
+    /*width:100%;*/
+    /*margin:0;*/
+    /*padding: 0;*/
+    /*border:0;*/
+    /*overflow: hidden;*/
+    /*display: block;*/
 }
 
 .options_bar{
-    position: relative;
-    width:100%;
-    height:20px;
-    color: #fff;
-    bottom:0;
-    left:0;
-    margin:0;
-    padding:0;
-    border:0;
+    /*position: relative;*/
+    /*width:100%;*/
+    /*height:20px;*/
+    /*color: #fff;*/
+    /*bottom:0;*/
+    /*left:0;*/
+    /*margin:0;*/
+    /*padding:0;*/
+    /*border:0;*/
 
 }
 
 .user{
-    position: absolute;
-    width:15%;
-    height:100%;
+    /*position: absolute;*/
+    /*width:15%;*/
+    /*height:100%;*/
     overflow: hidden;
+    background: linear-gradient(to right, rgba(255,255,255,0.3),rgba(250,250,250,0.5));
 }
 
 .comment_content{
-    position: absolute;
-    width:85%;
-    height:100%;
+    /*position: absolute;*/
+    /*width:85%;*/
+    /*height:100%;*/
     overflow: hidden;
     right:0;
     overflow-wrap: break-word;
@@ -212,51 +220,52 @@ input[type='file']{
 }
 
 .comment_container{
-    position: absolute;
-    height: 100%;
-    width:calc(100% - 110px);
-    overflow-wrap: break-word;
-    overflow-y: auto;
-    overflow-x: hidden;
+    /*position: absolute;*/
+    /*height: 100%;*/
+    /*width:calc(100% - 110px);*/
+    /*overflow-wrap: break-word;*/
+    /*overflow-y: auto;*/
+    /*overflow-x: hidden;*/
+    z-index: 1;
 
 
 }
 
 .image_container{
-    position: absolute;
-    width:100px;
-    height: 100%;
-    right:10px;
-    padding:0;
-    border:0;
-    margin:0;
+    /*position: absolute;*/
+    /*width:100px;*/
+    /*height: 100%;*/
+    /*right:10px;*/
+    /*padding:0;*/
+    /*border:0;*/
+    /*margin:0;*/
 
 }
 
 .uploaded_image{
-    position: absolute;
-    width:30px;
+    /*position: absolute;*/
+    /*width:30px;*/
     cursor: pointer;
 }
 
 .delete{
-    position: relative;
-    float: right;
-    width:30%;
-    height:100%;
-    text-align: center;
-    color: white;
-    cursor: pointer;
+    /*position: relative;*/
+    /*float: right;*/
+    /*width:30%;*/
+    /*height:100%;*/
+    /*text-align: center;*/
+    /*color: white;*/
+    /*cursor: pointer;*/
 }
 
 .reply{
-    position: relative;
-    float: right;
-    width:30%;
-    height:100%;
-    text-align: center;
-    color: white;
-    cursor: pointer;
+    /*position: relative;*/
+    /*float: right;*/
+    /*width:30%;*/
+    /*height:100%;*/
+    /*text-align: center;*/
+    /*color: white;*/
+    /*cursor: pointer;*/
 }
 
 
@@ -264,7 +273,7 @@ input[type='file']{
     width: 100%;
     height:auto;
     z-index: 100;
-    bottom:0;
+    /*bottom:0;*/
     overflow: hidden;
     background: #cfcfcf;
     opacity:0.9;
@@ -287,71 +296,94 @@ input[type='file']{
     position: relative;
     width:100%;
     height:auto;
-    overflow: auto;
+    overflow: scroll;
+    z-index: 1;
 }
 
 .reply_user{
-    position: absolute;
+    /*position: absolute;*/
 
-    width:20%;
-    height: auto;
+    /*width:20%;*/
+    /*height: auto;*/
     background: cyan;
+    height: 100%;
 }
 .reply_content{
-    position: absolute;
-    left:20%;
-    width:60%;
+    /*position: absolute;*/
+    /*left:20%;*/
+    /*width:60%;*/
+    /*height: auto;*/
+
+
+    overflow-wrap: break-word;
     height: auto;
 
 }
 
 .reply_form{
-    position: relative;
-    opacity:0;
-    height:0;
+    /*position: relative;*/
+    /*opacity:0;*/
+    height:auto;
+    /*display: none;*/
 }
 
+/*.reply_reply_form{*/
+    /*position: relative;*/
+    /*opacity:0;*/
+    /*height:0;*/
+    /*display: none;*/
+/*}*/
+
+/*.show_form{*/
+    /*opacity: 1;*/
+    /*display: flex;*/
+    /*width: 100%;*/
+    /*height:100%;*/
+    /*overflow: scroll;*/
+/*}*/
+
 .reply_delete{
-    position: absolute;
-    height:100%;
-    width:auto;
+    /*position: absolute;*/
+    /*height:100%;*/
+    /*width:auto;*/
     cursor: pointer;
+    right: 0 !important;
 }
 
 .reply_reply{
-    position: absolute;
-    height: 100%;
-    width:auto;
-    right:0;
+    /*position: absolute;*/
+    /*height: 100%;*/
+    /*width:auto;*/
+    /*right:0;*/
     cursor: pointer;
 
 }
 
-.svg_container{
-    position: relative;
-    display: block;
-    width:100%;
-    height:33%;
-    text-align: center;
-}
+/*.svg_container{*/
+    /*position: relative;*/
+    /*display: block;*/
+    /*width:100%;*/
+    /*height:33%;*/
+    /*text-align: center;*/
+/*}*/
 
-.tb_button{
-    position: relative;
-    width:100%;
-    text-align: center;
-    cursor: pointer;
-}
+/*.tb_button{*/
+    /*position: relative;*/
+    /*width:100%;*/
+    /*text-align: center;*/
+    /*cursor: pointer;*/
+/*}*/
 
-.tb_button svg{
-    position: absolute;
-    display: inline-block;
-    left:calc((100% - 55px)/2);
-    top:20%;
-}
+/*.tb_button svg{*/
+    /*position: absolute;*/
+    /*display: inline-block;*/
+    /*left:calc((100% - 55px)/2);*/
+    /*top:20%;*/
+/*}*/
 
-.tb_button svg:hover{
-    opacity: 0.5;
-}
+/*.tb_button svg:hover{*/
+    /*opacity: 0.5;*/
+/*}*/
 
 
 .comment_content img{
@@ -362,7 +394,9 @@ input[type='file']{
 #page_list_container{
     position: relative;
     width:100%;
-    overflow: hidden;;
+
+    max-height: 50%;
+    overflow: scroll;
 }
 
 #page_list_container ul{
@@ -386,15 +420,16 @@ input[type='file']{
 .page_list_a{
     position: relative;
     text-decoration: none;
-    color: white;
-    text-align: center;
-    font-size: 1.7em;
+    /*color: white;*/
+    /*text-align: center;*/
+    /*font-size: 1.7em;*/
 }
 
 .profile_image{
     position: relative;
     height:50px;
-    width:50px;
+    /*width:50px;*/
+    width: auto !important;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
@@ -408,4 +443,25 @@ input[type='file']{
     z-index: -1;
     cursor: pointer;
     background:white;
+}
+
+
+textarea::-webkit-input-placeholder {
+    color: #f8f9fa;
+}
+
+textarea:-moz-placeholder { /* Firefox 18- */
+    color: #f8f9fa;
+}
+
+textarea::-moz-placeholder {  /* Firefox 19+ */
+    color: #f8f9fa;
+}
+
+textarea:-ms-input-placeholder {
+    color: #f8f9fa;
+}
+
+textarea::placeholder {
+    color: #f8f9fa;
 }

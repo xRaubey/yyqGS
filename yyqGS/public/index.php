@@ -6,20 +6,26 @@ session_destroy();
 
     <!doctype html>
     <html lang="en">
-    <meta charset="utf-8">
-    <meta name="author" content="yyq">
-    <meta name="description" content="LikeCenter">
-    <title>Little World</title>
-    <link type="text/css" rel="stylesheet" href="<?php echo url_for('/stylesheet/index.css') ?>">
-    <link type="text/css" rel="stylesheet" href="<?php echo url_for('/stylesheet/bootstrap.css') ?>"
-    </html>
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="author" content="yyq">
+        <meta name="description" content="LikeCenter">
+        <title>Global News</title>
+        <link type="text/css" rel="stylesheet" href="<?php echo url_for('/stylesheet/index.css') ?>">
+        <link type="text/css" rel="stylesheet" href="<?php echo url_for('/stylesheet/bootstrap.css') ?>">
+
+    </head>
+
 
     <body>
+
     <div id="loading_page">
-        <div class="blah"
-        <div class="lds-css">
-            <div class="lds-microsoft">
-                <div></div>>
+        <div class="blah">
+            <div class="lds-css">
+                <div class="lds-microsoft">
+                    <div></div>
                     <div></div>
                     <div></div>
                     <div></div>
@@ -31,12 +37,13 @@ session_destroy();
             </div>
         </div>
         <div id="welcomings1">
-            Welcome to your Little World.
+            Global News
         </div>
-
         <footer id="footer">
-            yang643@uwm.edu
+            Yuqing Yang
         </footer>
+    </div>
+
 
     <script type="x-shader/x-vertex" id="vertexShader">
 
@@ -70,8 +77,8 @@ void main()
 </script>
 
     <div class="container h-100">
-        <div class="row justify-content-center">
-            <div id="logIn_UI" class="col-6 border border-dark rounded-top">
+        <div class="row h-100 w-100 p-0 m-0 justify-content-center align-content-around">
+            <div id="logIn_UI2" class="col-6 col-lg-4 border border-dark rounded-top pb-3">
                 <form id="li_form" class="form-group p-0 m-0" method="post" action="<?php echo url_for('/form/log_in.php') ?>">
                     <div id="input" class="row p-0 m-0 d-inline-flex justify-content-center">
                         <div id="formTitle" class="col-12 mt-3 mb-3">
@@ -85,11 +92,19 @@ void main()
                         <div id="formPassword" class="row col-12 justify-content-center">
                             <input type="password" class="form-control col-10 m-2 border-dark " name="password_li" placeholder="Password" id="password" onClick="this.setSelectionRange(0, this.value.length)">
                         </div>
-                        <input type="submit" class="btn btn-primary col-4 m-2 mt-5" name="login" value="Log In" id="li_button">
+
                         <input type="button" class="btn btn-danger col-4 m-2 mt-5" value="Sign Up" id="su_button">
+                        <input type="submit" class="btn btn-primary col-4 m-2 mt-5" name="login" value="Log In" id="li_button">
+
                         <div id="info" class="col-12 position-relative"></div>
                     </div>
                 </form>
+            </div>
+
+            <div id="socialLoginContainer" class="col-12 row justify-content-center">
+                <div id="wc" class="col-2 col-lg-1 rounded border-dark">
+                    <img src="pic/wcIcon.jpg" style="width: 100%;height: auto; opacity: 0.8; cursor: pointer;" class="OAuthIcon rounded border-dark" id="wcIcon">
+                </div>
             </div>
         </div>
     </div>
@@ -100,6 +115,12 @@ void main()
     <script src="<?php echo url_for('/script/index.js')?>" type="text/javascript"></script>
     <script src="<?php echo url_for('/script/three.js')?>" type="text/javascript"></script>
     <script src="<?php echo url_for('/script/OrbitControls.js')?>" type="text/javascript"></script>
+    <script src="<?php echo url_for('/script/TweenMax.min.js')?>" type="text/javascript"></script>
+
+
     </body>
 
-<?php db_disconnect($db)?>
+    <?php db_disconnect($db)?>
+
+    </html>
+

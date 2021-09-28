@@ -1,6 +1,10 @@
 <?php
 require_once '../../private/initialize.php';
 
+/**
+ * Check the validity of the inputs from the user. User account, user name, password,
+ */
+
 session_start();
 
 unset($_SESSION['key2']);
@@ -28,9 +32,9 @@ if(is_post_request()){
 
         $error1="4-20 characters.<br>(No special characters allowed)";
     }
-    if ($un_len>20 || empty($un) || !preg_match("/^[a-zA-Z0-9]+$/",$un)){
+    if ($un_len < 4 ||$un_len>20 || empty($un) || !preg_match("/^[a-zA-Z0-9]+$/",$un)){
 
-        $error2="1-20 characters.<br>(No special characters allowed)";
+        $error2="4-20 characters.<br>(No special characters allowed)";
     }
     if($psw_len<6){
 
@@ -65,12 +69,15 @@ if(is_post_request()){
 
             if($result){
                 $new = mysqli_insert_id($db);
-                $_SESSION['profile_id']=$new;
+//                $_SESSION['profile_id']=$new;
+                $_SESSION['ID']=$new;
                 $_SESSION['signUp'] = true;
                 $_SESSION['loggedIn'] = true;
             }
             else{
-                $_SESSION['profile_id']='';
+//                $_SESSION['profile_id']='';
+                unset($_SESSION['ID']);
+                session_destroy();
                 echo mysqli_error($db);
                 db_disconnect($db);
                 exit();

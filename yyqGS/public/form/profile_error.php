@@ -1,4 +1,9 @@
 <?php
+
+/**
+ * Detect whether sessions are still valid.
+ */
+
 require_once "../../private/initialize.php";
 session_start();
 $error1 = isset($_SESSION['ERROR1'])?$_SESSION['ERROR1']:'';

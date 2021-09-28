@@ -1,9 +1,4 @@
-/*************************
- * Croppie
- * Copyright 2017
- * Foliotek
- * Version: 2.5.1
- *************************/
+
 (function (root, factory) {
     if (typeof define === 'function' && define.amd) {
         // AMD. Register as an anonymous module.
@@ -1024,6 +1019,7 @@
         _updateOverlay.call(self);
     }
 
+
     function _updateZoomLimits (initial) {
         var self = this,
             minZoom = 0,
@@ -1050,6 +1046,8 @@
 
         zoomer.min = fix(minZoom, 4);
         zoomer.max = fix(maxZoom, 4);
+
+        console.log(imgData.height+" "+imgData.width);
 
         if (initial) {
             defaultInitialZoom = Math.max((boundaryData.width / imgData.width), (boundaryData.height / imgData.height));

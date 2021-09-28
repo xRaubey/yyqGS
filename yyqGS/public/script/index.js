@@ -1,18 +1,205 @@
 $("#loading_page").css("display","block");
 $(window).on("load",function(){
 
-    setTimeout(function () {
-        $("#loading_page").css({opacity:0,transition:"opacity 1s ease-in-out"});
-        setTimeout(function () {
-            $("#loading_page").css("z-index","-1");
-        },1000);
-    },2000);
+    /*
+        Loading page animation and style.
+     */
 
     var $w1 = $("#welcomings1");
     var $blah = $(".blah");
     var $blah_width = $blah.width();
 
     $w1.css({left:$blah_width,width:"auto",opacity:"1",transition:"opacity 1s ease-in-out"});
+
+
+    // $.ajax({
+    //     url:"https://saurav.tech/NewsAPI/top-headlines/category/technology/gb.json",
+    //     method:"GET",
+    //     success: function (d) {
+    //
+    //         console.log(d);
+    //         // console.log($.parseJSON(d));
+    //         // console.log(Math.min(d.articles.length,50));
+    //
+    //         // console.log(d.articles);
+    //         var news_array = [];
+    //         for (var i=0;i<Math.min(d.articles.length,5);i++){
+    //             news_array[i]=d.articles[i];
+    //         }
+    //
+    //
+    //         // console.log(typeof d);
+    //         // news_array[0] = d.articles[0];
+    //         // console.log(news_array[1].content);
+    //
+    //         $.ajax({
+    //             url:"./form/updateNews.php",
+    //             method:"POST",
+    //             data: {news:news_array,currentTime:"1620172800000",country:"United Kingdom",category:"tech"},
+    //             success: function (d) {
+    //                 // console.log(d);
+    //             }
+    //         })
+    //
+    //     }
+    // });
+
+    // $.ajax({
+    //         url:"https://saurav.tech/NewsAPI/top-headlines/category/entertainment/us.json",
+    //         method:"GET",
+    //         async:false,
+    //         success: function (d) {
+    //
+    //             console.log(d);
+    //         }
+    //     });
+
+
+
+    /*
+
+        Choose news APIs, and display them in the project.
+
+     */
+
+
+
+    var number_of_record = 10;  // Set the number of news displayed for each category of news.
+
+    var ajax_request_list = [
+        ["https://saurav.tech/NewsAPI/top-headlines/category/technology/au.json","Australia","tech"],
+        ["https://saurav.tech/NewsAPI/top-headlines/category/technology/us.json","United States","tech"],
+        ["https://saurav.tech/NewsAPI/top-headlines/category/business/us.json","United States","bns"],
+        ["https://saurav.tech/NewsAPI/top-headlines/category/technology/in.json","India","tech"],
+        ["https://saurav.tech/NewsAPI/top-headlines/category/technology/ru.json","Russian Federation","tech"],
+        ["https://saurav.tech/NewsAPI/top-headlines/category/entertainment/us.json","United States","ent"],
+        ["https://saurav.tech/NewsAPI/top-headlines/category/technology/fr.json","France","tech"],
+        ["https://saurav.tech/NewsAPI/top-headlines/category/entertainment/fr.json","France","ent"],
+        ["https://saurav.tech/NewsAPI/top-headlines/category/entertainment/gb.json","United Kingdom","ent"],
+        ["https://saurav.tech/NewsAPI/top-headlines/category/technology/gb.json","United Kingdom","tech"]
+    ];  // News APIs used to acquire news.
+
+    // var ajax_request_list = [
+    //     ["https://saurav.tech/NewsAPI/top-headlines/category/technology/gb.json","United Kingdom","tech"]
+    // ];
+
+
+    /**
+     *
+     * @description
+     * Delete outdated news
+     * @param currentTime = current system time
+     * @returns {*}
+     */
+
+    function ajax0(currentTime) {
+        return $.ajax({
+            url:"./form/delete_news.php",
+            method:"POST",
+            data:{currentTime:currentTime},
+            async:false,
+            success: function (d) {
+
+            }
+        });
+    }
+
+    /*
+
+        Run all the ajax calls at one. Update news content of the web site.
+
+     */
+
+    $.ajax({
+
+        url: "./form/timer.php",
+        method:"GET",
+        success: function(d){
+            var currentTime = new Date().getTime();
+            currentTime = currentTime-(currentTime%(24*60*60*1000));
+
+            if (currentTime>=(parseInt(d)+(24*60*60*1000))){
+
+                // $.when(ajax0(currentTime),ajax1(currentTime),ajax2(currentTime),ajax3(currentTime),ajax4(currentTime),ajax5(currentTime),ajax6(currentTime),ajax7(currentTime),ajax8(currentTime),ajax9(currentTime),ajax10(currentTime)).then(function(a0,a1,a2,a3,a4,a5,a6){
+                //     // console.log("done");
+                //
+                //
+                //     // console.log(a6);
+                //
+                // });
+
+                ajax0(currentTime);
+
+                $.each(ajax_request_list,function (i,v) {
+
+                    var ajax_url = v[0];
+                    var news_country = v[1];
+                    var news_type = v[2];
+
+
+                    $.ajax({
+                        url:ajax_url,
+                        method:"GET",
+                        async:true,
+                        success: function (d) {
+
+                            console.log(d);
+
+                            var news_array = [];
+                            for (var i=0;i<Math.min(d.articles.length,number_of_record);i++){
+                                news_array[i]=d.articles[i];
+                            }
+                            // console.log(news_array.length);
+
+                            $.ajax({
+                                url:"./form/updateNews.php",
+                                method:"POST",
+                                async:true,
+                                data:{news:news_array,country:news_country,currentTime:currentTime,category:news_type},
+                                success: function (d) {
+                                    // console.log(d);
+                                }
+                            })
+                        }
+                    });
+
+                });
+
+
+
+
+            }
+        },
+        error: function () {
+           alert("Ajax Error.") ;
+        },
+        complete: function () {
+
+        }
+        });
+
+
+    $(document).ajaxStop(function () {
+        setTimeout(function () {
+            TweenLite.fromTo($("#loading_page"),2.3,{right:'0'},{right:'100%',display:"none",ease:Bounce.easeOut});
+
+            // TweenMax.to($("#loading_page"),1.3, {ease: Elastic.easeOut.config(1,0.3),"letf":0});
+
+            // $("#loading_page").css({opacity:0,transition:"opacity 1s ease-in-out"});
+            // setTimeout(function () {
+            //     $("#loading_page").css("z-index","-1");
+            // },1000);
+        },1000);
+    });
+
+
+
+
+    /*
+
+        Three.js background setting.
+
+     */
 
 
 
@@ -215,12 +402,22 @@ $(window).on("load",function(){
     }
     animate();
 
+
+
+
+
+    /*
+
+        Log in functionality.
+
+     */
+
     var $form = $("#li_form");
 
     $("#li_button").on("click",function (e) {
         e.preventDefault();
         $.ajax({
-            url:"/yyqGS/public/form/log_in.php",
+            url:"./form/log_in.php",
             type:"POST",
             data:$form.serialize(),
             success:function (d) {
@@ -229,11 +426,26 @@ $(window).on("load",function(){
                     // $("#info").css("color","red");
                 }
                 else{
-                    location.href = "/yyqGS/public/home.php?id="+d;
+                    location.href = "./home.php?id="+d;
                 }
             }
         })
     });
 
+
+
+
+
+    /*
+
+        Social login.
+
+     */
+
+
+    $("#wcIcon").on("click",function () {
+        alert(1);
+        window.location.href = 'oauth_index.html';
+    });
 
 });

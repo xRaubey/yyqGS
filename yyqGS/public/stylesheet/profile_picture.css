@@ -23,10 +23,10 @@ body,html{
 }
 
 #container{
-    background: #cfcfcf;
-    height:500px;
-    width:500px;
-    position: absolute;
+    /*background: #cfcfcf;*/
+    /*height:500px;*/
+    /*width:500px;*/
+    /*position: absolute;*/
     border:3px solid white;
 }
 
@@ -36,14 +36,14 @@ body,html{
     font-size: 3em;
 }
 
-.croppie-container{
-    position: relative;
-    height:auto;
-    width:100%;
-}
+/*.croppie-container{*/
+    /*position: relative;*/
+    /*height:auto;*/
+    /*width:100%;*/
+/*}*/
 
 #choose_profile{
-    position: absolute;
+    /*position: absolute;*/
     cursor: pointer;
 }
 
@@ -51,23 +51,26 @@ body,html{
     opacity:0.5;
 }
 
-#loading_button{
-    position: absolute;
-    cursor: pointer;
-    z-index: -1;
-    opacity:0;
-}
 
 
-#profile_form{
-    text-align: center;
-    position: relative;
-}
 
-#notice{
-    width:100%;
-    position: absolute;
-    height:auto;
-    bottom:0;
-    text-align: center;
-}
+/*#loading_button{*/
+    /*position: absolute;*/
+    /*cursor: pointer;*/
+    /*z-index: -1;*/
+    /*opacity:0;*/
+/*}*/
+
+
+/*#profile_form{*/
+    /*text-align: center;*/
+    /*position: relative;*/
+/*}*/
+
+/*#notice{*/
+    /*width:100%;*/
+    /*position: absolute;*/
+    /*height:auto;*/
+    /*bottom:0;*/
+    /*text-align: center;*/
+/*}*/
